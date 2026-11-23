@@ -1,0 +1,42 @@
+# Whitelist: erst alles ignorieren, dann gezielt freigeben.
+# Dieses Repo soll oeffentlich werden koennen — deshalb kann hier nichts
+# versehentlich hineinrutschen, auch kein Ordner, den es heute noch nicht gibt.
+*
+
+!.gitignore
+!README.md
+!CLAUDE.md
+!TODO.md
+!LICENSE
+!docs/
+!docs/**
+!packages/
+!packages/**
+!scripts/
+!scripts/**
+!.github/
+!.github/**
+
+# Projekt-Skills: Arbeitsablaeufe, die Claude auf Zuruf startet.
+# NICHT der ganze .claude-Ordner — der traegt auch Sitzungsdaten.
+!.claude/
+!.claude/skills/
+!.claude/skills/**
+
+# Harte Ausschluesse — greifen auch, falls oben versehentlich freigegeben.
+# Alles hier drunter gehoert ins private Gegenstueck, nie hierher.
+.env
+.env.*
+secrets.yaml
+*.local.*
+wohnung/
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+__pycache__/
+*.db
+*.db-*
+*.log
+.DS_Store
